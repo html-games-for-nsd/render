@@ -5,52 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Games</title>
     <style>
-      
+      .hidden {
+        display: none;
+      }
     </style>
 </head>
 <body>
   <h1 id="title">HTML Games for NSD</h1>
-  <p class="game-link" class="high-school-only"><a href="1v1lol/">1v1.lol</a></p>
-  <p class="game-link" class="high-school-only"><a href="10-minutes-till-dawn/">10 Minutes Till Dawn</a></p>
-  <p class="game-link" class="high-school-only"><a href="2048/">2048</a></p>
-  <p class="game-link" class="all-grades"><a href="a-dance-of-fire-and-ice/">A Dance of Fire and Ice</a></p>
-  <p class="game-link" class="all-grades"><a href="basketball-stars/">Basketball Stars</a></p>
-  <p class="game-link" class="all-grades"><a href="bitlife/">Bitlife</a></p>
-  <p class="game-link" class="all-grades"><a href="bloons-tower-defense-5/">Bloons TD 5</a></p>
-  <p class="game-link" class="high-school-only"><a href="cookie-clicker/">Cookie Clicker</a></p>
-  <p class="game-link" class="high-school-only"><a href="crossy-road/">Crossy Road</a></p>
-  <p class="game-link" class="all-grades"><a href="doomzio/">Doomz.io</a></p>
-  <p class="game-link" class="high-school-only"><a href="drive-mad/">Drive Mad</a></p>
-  <p class="game-link" class="all-grades"><a href="duck-life-5/">Duck Life 5</a></p>
-  <p class="game-link" class="all-grades"><a href="eaglercraft-offline/">Eaglercraft Offline</a></p>
-  <p class="game-link" class="high-school-only"><a href="fireboy-and-watergirl/">Fireboy and Watergirl</a></p>
-  <p class="game-link" class="all-grades"><a href="five-nights-at-freddys-4/">Five Nights at Freddy's 4</a></p>
-  <p class="game-link" class="all-grades"><a href="fruit-ninja/">Fruit Ninja</a></p>
-  <p class="game-link" class="high-school-only"><a href="helix-jump/">Helix Jump</a></p>
-  <p class="game-link" class="all-grades"><a href="holeio/">Hole.io</a></p>
-  <p class="game-link" class="high-school-only"><a href="icy-purple-head/">Icy Purple Head</a></p>
-  <p class="game-link" class="all-grades"><a href="justfalllol/">Justfall.lol</a></p>
-  <p class="game-link" class="all-grades"><a href="learn-to-fly-3/">Learn to Fly 3</a></p>
-  <p class="game-link" class="high-school-only"><a href="little-alchemy/">Little Alchemy</a></p>
-  <p class="game-link" class="all-grades"><a href="monkey-mart/">Monkey Mart</a></p>
-  <p class="game-link" class="high-school-only"><a href="motox3m-poolparty/">Moto X 3M - Pool Party</a></p>
-  <p class="game-link" class="all-grades"><a href="motox3m-spookyland/">Moto X 3M - Spooky Land</a></p>
-  <p class="game-link" class="high-school-only"><a href="motox3m-winterland/">Moto X 3M - Winter Land</a></p>
-  <p class="game-link" class="all-grades"><a href="ngon/">N-Gon</a></p>
-  <p class="game-link" class="high-school-only"><a href="ovo/">OvO</a></p>
-  <p class="game-link" class="high-school-only"><a href="paperio/">Paper.io</a></p>
-  <p class="game-link" class="high-school-only"><a href="retrobowl/">Retro Bowl</a></p>
-  <p class="game-link" class="all-grades"><a href="run3/">Run 3</a></p>
-  <p class="game-link" class="high-school-only"><a href="slope/">Slope</a></p>
-  <p class="game-link" class="all-grades"><a href="snakeio/">Snake.io</a></p>
-  <p class="game-link" class="all-grades"><a href="snowballio/">Snowball.io</a></p>
-  <p class="game-link" class="high-school-only"><a href="stickman-climb/">Stickman Climb</a></p>
-  <p class="game-link" class="all-grades"><a href="stickman-hook/">Stickman Hook</a></p>
-  <p class="game-link" class="all-grades"><a href="super-mario-bros/">Super Mario Bros</a></p>
-  <p class="game-link" class="all-grades"><a href="temple-run-2/">Temple Run 2</a></p>
-  <p class="game-link" class="all-grades"><a href="territorialio/">Territorial.io</a></p>
-  <p class="game-link" class="all-grades"><a href="there-is-no-game/">There is No Game</a></p>
-  <p class="game-link" class="high-school-only"><a href="tiny-fishing/">Tiny Fishing</a></p>
-  <p class="game-link" class="all-grades"><a href="we-become-what-we-behold/">We Become What We Behold</a></p>
+
+  <label for="game-filter">Filter Games: </label>
+    <select id="game-filter">
+        <option value="all">All Games</option>
+        <option value="not-high-school-only">Games That Work For Elementary & Middle School</option>
+    </select>
+
+  <div id="game-list">
+    <p class="game-link high-school-only"><a href="1v1lol/">1v1.lol</a></p>
+    <p class="game-link high-school-only"><a href="10-minutes-till-dawn/">10 Minutes Till Dawn</a></p>
+    <p class="game-link high-school-only"><a href="2048/">2048</a></p>
+    <p class="game-link all-grades"><a href="a-dance-of-fire-and-ice/">A Dance of Fire and Ice</a></p>
+    <p class="game-link all-grades"><a href="basketball-stars/">Basketball Stars</a></p>
+    <p class="game-link all-grades"><a href="bitlife/">Bitlife</a></p>
+    <p class="game-link all-grades"><a href="bloons-tower-defense-5/">Bloons TD 5</a></p>
+    <p class="game-link high-school-only"><a href="cookie-clicker/">Cookie Clicker</a></p>
+    <p class="game-link high-school-only"><a href="crossy-road/">Crossy Road</a></p>
+    <p class="game-link all-grades"><a href="doomzio/">Doomz.io</a></p>
+    <p class="game-link high-school-only"><a href="drive-mad/">Drive Mad</a></p>
+    <p class="game-link all-grades"><a href="duck-life-5/">Duck Life 5</a></p>
+    <p class="game-link all-grades"><a href="eaglercraft-offline/">Eaglercraft Offline</a></p>
+    <p class="game-link high-school-only"><a href="fireboy-and-watergirl/">Fireboy and Watergirl</a></p>
+    <p class="game-link all-grades"><a href="five-nights-at-freddys-4/">Five Nights at Freddy's 4</a></p>
+    <p class="game-link all-grades"><a href="fruit-ninja/">Fruit Ninja</a></p>
+    <p class="game-link high-school-only"><a href="helix-jump/">Helix Jump</a></p>
+    <p class="game-link all-grades"><a href="holeio/">Hole.io</a></p>
+    <p class="game-link high-school-only"><a href="icy-purple-head/">Icy Purple Head</a></p>
+    <p class="game-link all-grades"><a href="justfalllol/">Justfall.lol</a></p>
+    <p class="game-link all-grades"><a href="learn-to-fly-3/">Learn to Fly 3</a></p>
+    <p class="game-link high-school-only"><a href="little-alchemy/">Little Alchemy</a></p>
+    <p class="game-link all-grades"><a href="monkey-mart/">Monkey Mart</a></p>
+    <p class="game-link high-school-only"><a href="motox3m-poolparty/">Moto X 3M - Pool Party</a></p>
+    <p class="game-link all-grades"><a href="motox3m-spookyland/">Moto X 3M - Spooky Land</a></p>
+    <p class="game-link high-school-only"><a href="motox3m-winterland/">Moto X 3M - Winter Land</a></p>
+    <p class="game-link all-grades"><a href="ngon/">N-Gon</a></p>
+    <p class="game-link high-school-only"><a href="ovo/">OvO</a></p>
+    <p class="game-link high-school-only"><a href="paperio/">Paper.io</a></p>
+    <p class="game-link high-school-only"><a href="retrobowl/">Retro Bowl</a></p>
+    <p class="game-link all-grades"><a href="run3/">Run 3</a></p>
+    <p class="game-link high-school-only"><a href="slope/">Slope</a></p>
+    <p class="game-link all-grades"><a href="snakeio/">Snake.io</a></p>
+    <p class="game-link all-grades"><a href="snowballio/">Snowball.io</a></p>
+    <p class="game-link high-school-only"><a href="stickman-climb/">Stickman Climb</a></p>
+    <p class="game-link all-grades"><a href="stickman-hook/">Stickman Hook</a></p>
+    <p class="game-link all-grades"><a href="super-mario-bros/">Super Mario Bros</a></p>
+    <p class="game-link all-grades"><a href="temple-run-2/">Temple Run 2</a></p>
+    <p class="game-link all-grades"><a href="territorialio/">Territorial.io</a></p>
+    <p class="game-link all-grades"><a href="there-is-no-game/">There is No Game</a></p>
+    <p class="game-link high-school-only"><a href="tiny-fishing/">Tiny Fishing</a></p>
+    <p class="game-link all-grades"><a href="we-become-what-we-behold/">We Become What We Behold</a></p>
+  </div>
+
+  <script>
+        document.getElementById("game-filter").addEventListener("change", function() {
+            const selectedValue = this.value;
+            const gameLinks = document.querySelectorAll('.game-link');
+
+            gameLinks.forEach(link => {
+                if (selectedValue === "all") {
+                    link.classList.remove("hidden");
+                } else if (link.classList.contains("high-school-only")) {
+                    if (!link.classList.contains("hidden")) {
+                      link.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
