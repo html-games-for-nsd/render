@@ -38,7 +38,7 @@
             color: #495057;
         }
         input[type="text"] {
-            width: 100%;
+            width: 95%;
             padding: 12px;
             margin-bottom: 20px;
             border: 1px solid #ced4da;
@@ -98,8 +98,8 @@
     </div>
 
     <script>
-        const API_KEY = 'YOUR_API_KEY'; // Replace with your actual API key
-        const API_URL = 'https://api.openai.com/v1/chat/completions'; // OpenAI ChatGPT API endpoint
+        const API_KEY = 'YOUR_API_KEY';
+        const API_URL = 'https://api.openai.com/v1/chat/completions';
 
         async function submitQuery() {
             const query = document.getElementById('userQuery').value;
@@ -114,7 +114,7 @@
                         'Authorization': `Bearer ${API_KEY}`
                     },
                     body: JSON.stringify({
-                        model: 'gpt-3.5-turbo', // Specify the model you want to use
+                        model: 'gpt-4.1-mini',
                         messages: [{ role: 'user', content: query }]
                     })
                 });
@@ -124,12 +124,12 @@
                 }
 
                 const data = await apiResponse.json();
-                responseDiv.innerHTML = data.choices[0].message.content; // Display the AI's response
+                responseDiv.innerHTML = data.choices[0].message.content;
             } catch (error) {
                 responseDiv.innerHTML = 'Error: ' + error.message;
             }
 
-            return false; // Prevent default form submission
+            return false;
         }
     </script>
 </body>
